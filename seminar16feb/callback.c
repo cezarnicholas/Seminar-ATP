@@ -27,4 +27,7 @@ int main() {
     int a = 40, b = 20;
     // 40 + 20 = 60
     printf("%d + %d = %d\n", a, b, aplica_operatie(a, b, aduna));
+    printf("%d - %d = %d\n", a, b, aplica_operatie(a, b, scade));
+    printf("%d * %d = %d\n", a, b, aplica_operatie(a, b, inmulteste));
+    printf("%d / %d = %d\n", a, b, aplica_operatie(a, b, imparte));
 }
