@@ -23,11 +23,11 @@ int main() {
     for (int i = 0; i < n; i++)
         scanf("%d", &a[i]);
 
-    qsort(a, n, sizeof(a[0]), cmp_cresc);
+    qsort(a, n, sizeof(int), cmp_cresc);
     for (int i = 0; i < n; i++)
         printf("%d%c", a[i], (i == n - 1 ? '\n' : ' '));
 
-    qsort(a, n, sizeof(a[0]), cmp_descresc);
+    qsort(a, n, sizeof(int), cmp_descresc);
     for (int i = 0; i < n; i++)
         printf("%d%c", a[i], (i == n - 1 ? '\n' : ' '));
 
