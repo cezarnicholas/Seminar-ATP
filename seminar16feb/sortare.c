@@ -39,7 +39,7 @@ void var2(int *a, int n, int(*comparator)(int, int)) {
         int poz = i;
 
         for (int j = i + 1; j < n; j++)
-            if(comparator(a[poz], a[j]))
+            if (comparator(a[poz], a[j]))
                 poz = j;
         
         if (i != poz) {
