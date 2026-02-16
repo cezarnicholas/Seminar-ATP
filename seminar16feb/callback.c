@@ -30,6 +30,4 @@ int main() {
     printf("%d - %d = %d\n", a, b, aplica_operatie(a, b, scade));
     printf("%d * %d = %d\n", a, b, aplica_operatie(a, b, inmulteste));
     printf("%d / %d = %d\n", a, b, aplica_operatie(a, b, imparte));
-
-    
 }
