@@ -1,12 +1,12 @@
 #include <stdio.h>
 
-void addone(int *p) {
+void add_one(int *p) {
     *p = (*p) + 1;
 }
 
 int main() {
     int a = 5, *p = &a;
-    addone(p);
+    add_one(p);
 
     printf("%d\n", *p);
 }
