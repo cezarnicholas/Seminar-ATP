@@ -2,6 +2,6 @@
 
 int main() {
     FILE *fisier = fopen("abc.txt", "w");
-    fprintf("fisier", "ana");
+    fprintf(fisier, "ana");
     fclose(fisier);
 }
