@@ -1,7 +1,11 @@
 #include <stdio.h>
 
 int main() {
-    FILE *fisier = fopen("abc.txt", "w");
-    fprintf(fisier, "ana");
+    char nume[128];
+    printf("Introdu numele fisierului: ");
+    scanf("%127s", nume);
+
+    FILE *fisier = fopen(nume, "w");
+    fprintf(fisier, "ana\n");
     fclose(fisier);
 }
