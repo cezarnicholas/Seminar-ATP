@@ -34,14 +34,14 @@ int main() {
     size_t num_elements = bytes / SIZE;
 
     student_t *studenti = (student_t*)malloc(num_elements * SIZE);
+    fread(studenti, SIZE, num_elements, bin);
 
     int nr_matricol;
-    scanf("%d", &nr_matricol);
-    
-    fread(studenti, SIZE, num_elements, bin);
-    for (int i = 0; i < num_elements; i++) {
-        if (studenti[i].nr_matricol == nr_matricol)
-            output_student(&studenti[i]);
+    while (scanf("%d", &nr_matricol) == 1) {
+        for (int i = 0; i < num_elements; i++) {
+            if (studenti[i].nr_matricol == nr_matricol)
+                output_student(&studenti[i]);
+        }
     }
 
     fclose(bin);
