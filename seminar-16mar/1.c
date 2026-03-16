@@ -14,11 +14,15 @@ typedef struct {
 
 void output_student(student_t s) {
     printf("===================================\n");
+
     printf("%d %s %d\n", s.nr_matricol, s.nume_prenume, s.grupa);
     printf("Punctaj practica: %d\n", s.punctaj_practica);
+
     for (int i = 0; i < 10; i++)
         printf("Puncte tema %d: %d\n", i + 1, s.puncte_teme[i]);
+    
     printf("Punctaj examen: %d\n", s.punctaj_examen);
+
     printf("===================================\n");
 }
 
@@ -83,7 +87,7 @@ int main() {
 
             fseek(bin, -SIZE, SEEK_CUR);
             fwrite(&stud, SIZE, 1, bin);
-            
+
             printf("Overwritten!\n\n");
         } else {
             printf("Nu exista un student cu acest numar matricol!\n");
