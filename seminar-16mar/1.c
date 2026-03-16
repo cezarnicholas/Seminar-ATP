@@ -83,6 +83,7 @@ int main() {
 
             fseek(bin, -SIZE, SEEK_CUR);
             fwrite(&stud, SIZE, 1, bin);
+            
             printf("Overwritten!\n\n");
         } else {
             printf("Nu exista un student cu acest numar matricol!\n");
