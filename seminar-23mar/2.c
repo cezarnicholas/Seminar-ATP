@@ -2,16 +2,20 @@
 #include <stdlib.h>
 
 int count_negatives(int *v, int lo, int hi) {
-    if (lo == hi)
-        return (v[lo] < 0);
+    int rez;
+    
+    if (lo == hi) {
+        rez = (v[lo] < 0);
+    } else {
+        int mid = (lo + hi) / 2;
 
-    int mid = (lo + hi) / 2;
+        int jum_st = count_negatives(v, lo, mid);
+        int jum_dr = count_negatives(v, mid + 1, hi);
 
-    int jum_st = count_negatives(v, lo, mid);
-    int jum_dr = count_negatives(v, mid + 1, hi);
+        rez = jum_st + jum_dr;
+    }
 
-
-    return jum_st + jum_dr;
+    return rez;
 }
 
 int main(int argc, char *argv[]) {
