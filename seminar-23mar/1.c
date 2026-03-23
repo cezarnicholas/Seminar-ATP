@@ -28,4 +28,5 @@ int main(int argc, char *argv[]) {
     int ans = count_negatives(v, n);
 
     printf("%d\n", ans);
+    free(v);
 }
