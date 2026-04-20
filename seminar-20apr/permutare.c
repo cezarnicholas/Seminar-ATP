@@ -10,10 +10,12 @@ int valid(int p) {
 }
 
 void afiseaza() {
+    printf("{");
+    
     for (int i = 1; i <= n; i++)
-        printf("%d ", sol[i]);
+        printf("%d%s", sol[i], (i == n ? "" : ", "));
 
-    printf("\n");
+    printf("}\n");
 }
 
 void permutare(int p) {
